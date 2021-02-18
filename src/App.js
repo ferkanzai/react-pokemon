@@ -31,6 +31,7 @@ function App() {
 
   const handleGetPokemon = () => {
     getPokemon(inputText)
+    setInputText('')
   };
 
   return (
