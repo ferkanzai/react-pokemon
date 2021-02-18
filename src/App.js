@@ -55,9 +55,6 @@ function App() {
           onKeyPress={handleEnterKeyPress}
           size='30'
         />
-        <button className='button' onClick={handleGetPokemon}>
-          GET POKEMON
-        </button>
       </div>
       <div className='pokemon'>
         {!pokemonList.length
