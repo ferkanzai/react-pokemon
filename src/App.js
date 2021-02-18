@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      getPokemon(inputText)
+      getPokemon(inputText.toLowerCase())
     }, 500)
 
     return () => {
