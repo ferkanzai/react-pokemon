@@ -1,0 +1,19 @@
+.pokemon-name {
+  text-transform: capitalize;
+}
+
+.pokemon-card {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+.pokemon-text {
+  display: flex;
+  align-items: center;
+}
+
+.pokemon-text > * {
+  margin: 0.2rem;
+}
