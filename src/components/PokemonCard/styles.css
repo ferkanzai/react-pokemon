@@ -3,12 +3,14 @@
 }
 
 .pokemon-card {
-  border: 1px solid black;
+  border: 1px solid #7c0303;
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 1rem;
   width: 155px;
+  height: 120px;
   text-align: center;
+  position: relative;
 }
 
 .pokemon-text {
@@ -19,4 +21,36 @@
 
 .pokemon-text > * {
   margin: 0.2rem;
+}
+
+.pokemon-img {
+  max-height: 90px;
+}
+
+.more-info {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  outline: none;
+  background-color: #f58181;
+  border-color: #7c0303;
+}
+
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  outline: none;
+  background-color: #f58181;
+  border-color: #7c0303;
 }

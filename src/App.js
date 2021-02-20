@@ -63,18 +63,23 @@ function App() {
                   placeholder='Type either pokemon name or pokemon ID'
                   onChange={handleInputTextChange}
                   size='35'
+                  className='type-pokemon'
                 />
               </div>
               <div className='pokemon'>
                 {pokemonList.map((pokemon) => {
-                  return <PokemonCard {...{ pokemon, key: pokemon.id }} />;
+                  return <PokemonCard {...{ pokemon, key: pokemon.id, setPokemonList }} />;
                 })}
               </div>
             </Route>
 
             <Route path='/create' exact>
-              <Create />
+              <Create {...{pokemonList, setPokemonList}}/>
             </Route>
+
+            {/* <Route path='pokemon/:id' exact>
+
+            </Route> */}
 
             <Redirect to='/' />
           </Switch>

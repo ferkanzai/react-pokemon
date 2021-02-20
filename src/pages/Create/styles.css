@@ -1,8 +1,67 @@
-/* .create {
-  position: absolute;
-  top: 10rem;
+.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .select-type {
-  margin-top: 200px;
-} */
+  outline: none;
+  width: 150px;
+  margin-left: 0.5rem;
+}
+
+.select-error {
+  border: 2px solid red;
+  outline: none;
+}
+
+.submit {
+  width: 70px;
+}
+
+.input-divs {
+  margin: 0.5rem 0;
+}
+
+.submit-div {
+  position: relative;
+  display: block;
+}
+
+.submit {
+  height: 80px;
+  width: 200px;
+  border-radius: 15px;
+  background-color: #ee9e9e;
+  border: 3px solid #7c0303;
+  color: #7c0303;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  bottom: -90px;
+  right: -100px;
+  outline: none;
+}
+
+.submit-step {
+  height: 50px;
+  width: 194px;
+  background-color: #f58181;
+  border-radius: 15px;
+  border: 3px solid #7c0303;
+  position: absolute;
+  z-index: -1;
+  bottom: -100px;
+  right: -100px;
+  box-shadow: 0 8px #ffbbbb;
+}
+
+.submit:hover {
+  bottom: -100px;
+  cursor: pointer;
+}
+
+.submit:active {
+  bottom: -108px;
+}
