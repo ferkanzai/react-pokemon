@@ -11,7 +11,7 @@ const TYPE_URL = `${BASE_URL}type`;
 const pokemonDuplicated = (arr, { name, id }) =>
   arr.filter((pokemon) => pokemon.name === name || pokemon.id === id).length !== 0;
 
-const getPkmnTypes = async () => {
+const getAllTypes = async () => {
   const res = await fetch(`${TYPE_URL}`);
   const data = await res.json();
   return data.results.map(({ name }) => name);
@@ -22,6 +22,64 @@ const handleErrors = {
   validate: 'select-error',
 };
 
+const formatPokemon = (pokemon) => ({
+  name: pokemon.name,
+  id: pokemon.id,
+  sprites: {
+    front_default: pokemon.img,
+  },
+  types: [
+    {
+      type: {
+        name: pokemon.typeOne,
+      }
+    },
+    {
+      type: {
+        name: pokemon.typeTwo,
+      }
+    }
+  ],
+  stats: [
+    {
+      base_stat: Math.floor(Math.random() * 255),
+      stat: {
+        name: 'hp'
+      }
+    },
+    {
+      base_stat: Math.floor(Math.random() * 190),
+      stat: {
+        name: 'attack'
+      }
+    },
+    {
+      base_stat: Math.floor(Math.random() * 250),
+      stat: {
+        name: 'defense'
+      }
+    },
+    {
+      base_stat: Math.floor(Math.random() * 194),
+      stat: {
+        name: 'special-attack'
+      }
+    },
+    {
+      base_stat: Math.floor(Math.random() * 250),
+      stat: {
+        name: 'special-defense'
+      }
+    },
+    {
+      base_stat: Math.floor(Math.random() * 200),
+      stat: {
+        name: 'speed'
+      }
+    },
+  ]
+});
+
 const Create = ({ pokemonList, setPokemonList }) => {
   const { register, handleSubmit, errors } = useForm();
   const history = useHistory();
@@ -30,7 +88,7 @@ const Create = ({ pokemonList, setPokemonList }) => {
   const [selected, setSelected] = useState('');
 
   useEffect(() => {
-    const get = async () => setPokemonTypes(await getPkmnTypes());
+    const get = async () => setPokemonTypes(await getAllTypes());
     get();
   }, []);
 
@@ -38,7 +96,7 @@ const Create = ({ pokemonList, setPokemonList }) => {
 
   const handleSubmitForm = (data) => {
     if (!pokemonDuplicated(pokemonList, data)) {
-      setPokemonList((prevPokemonList) => [...prevPokemonList, data]);
+      setPokemonList((prevPokemonList) => [...prevPokemonList, formatPokemon(data)]);
       history.push('/');
     } else {
       alert('Pokemon name or ID already exists');
@@ -72,14 +130,14 @@ const Create = ({ pokemonList, setPokemonList }) => {
           />
         </div>
         <div className='input-divs'>
-          <label htmlFor='sprites.front_default'>Image URL</label>
+          <label htmlFor='img'>Image URL</label>
           <input
-            name='sprites.front_default'
+            name='img'
             id='img'
             type='text'
             ref={register({ required: true })}
             placeholder='Image URL'
-            className={`select-type ${handleErrors[errors?.sprites?.front_default?.type]}`}
+            className={`select-type ${handleErrors[errors?.img?.type]}`}
           />
         </div>
         <div className='input-divs'>

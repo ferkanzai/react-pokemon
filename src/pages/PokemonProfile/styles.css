@@ -1,0 +1,80 @@
+.PokemonProfile {
+  display: flex;
+  align-items: center;
+  margin: 3rem;
+}
+
+.PokemonProfile_div_img {
+  margin: 2rem;
+}
+
+.PokemonProfile_name {
+  text-transform: capitalize;
+}
+
+.PokemonProfile_img {
+  width: 400px;
+}
+
+.PokemonProfile_types {
+  display: flex;
+  justify-content: center;
+}
+
+.PokemonProfile_info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+
+.PokemonProfile_info > p, h3 {
+  margin: 0.2rem;
+}
+
+.PokemonProfile_typeName {
+  margin: 0;
+}
+
+.PokemonProfile_type {
+  margin: 1rem;
+  text-transform: capitalize;
+}
+
+.PokemonProfile_stats {
+  text-transform: capitalize;
+  text-align: center;
+  margin: 2rem;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.PokemonProfile_statBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PokemonProfile_statBar > p {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.PokemonProfile_statBarContainer {
+  width: 200px;
+  height: 24px;
+  border: 1px solid black;
+}
+
+.PokemonProfile_statBarFill {
+  height: 24px;
+  background-color: darkgoldenrod;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.PokemonProfile_statBarNumber {
+  font-weight: 800;
+}

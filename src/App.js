@@ -6,6 +6,7 @@ import './App.css';
 import PokemonCard from './components/PokemonCard';
 import Header from './components/Header';
 import Create from './pages/Create';
+import PokemonProfile from './pages/PokemonProfile';
 
 import { BASE_URL } from './utils';
 
@@ -77,11 +78,11 @@ function App() {
               <Create {...{pokemonList, setPokemonList}}/>
             </Route>
 
-            {/* <Route path='pokemon/:id' exact>
+            <Route path='/pokemon/:id' exact>
+                <PokemonProfile pokemonList={pokemonList} />
+            </Route>
 
-            </Route> */}
-
-            <Redirect to='/' />
+            {/* <Redirect to='/' /> */}
           </Switch>
         </div>
       </div>

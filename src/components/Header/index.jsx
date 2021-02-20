@@ -14,7 +14,7 @@ const Header = (props) => {
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/create'>Create</Link></li>
-          <li><Link to='/profile/:name/'>Profile</Link></li>
+          {/* <li><Link to='/profile/:name/'>Profile</Link></li> */}
         </ul>
       </nav>
     </header>
