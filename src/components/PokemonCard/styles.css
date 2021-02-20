@@ -7,11 +7,14 @@
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 1rem;
+  width: 155px;
+  text-align: center;
 }
 
 .pokemon-text {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .pokemon-text > * {

@@ -1,0 +1,107 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
+@font-face {
+  font-family: 'Pokemon';
+  src: url('//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot');
+  src: url('//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2') format('woff2'),
+    url('//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff') format('woff'),
+    url('//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf') format('truetype'),
+    url('//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon') format('svg');
+}
+
+.title {
+  display: flex;
+}
+
+h1 {
+  margin: 0rem;
+  font-family: 'Pokemon';
+}
+
+header {
+  align-items: center;
+  background-color: burlywood;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.6rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.pokeball {
+  width: 65px;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  padding: 0.6rem 2rem;
+  border: 1px solid black;
+  margin: 1rem;
+  text-shadow: 2px 2px lightgrey;
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.55);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.55);
+}
+
+/* li:active {
+  transform: translateX(3px);
+  
+}
+
+#all {
+  position: relative;
+  top: 80px;
+}
+
+.button {
+  height: 80px;
+  width: 200px;
+  border-radius: 15px;
+  background-color: #feeff0;
+  border: 3px solid #bb8d9c;
+  color: #40342b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  outline: none;
+}
+
+.button-step {
+  height: 50px;
+  width: 194px;
+  background-color: #fac4d3;
+  border-radius: 15px;
+  border: 3px solid #bb8d9c;
+  position: absolute;
+  z-index: -1;
+  bottom: -10px;
+  box-shadow: 0 8px #ffe3e3;
+}
+
+.button:hover {
+  bottom: -3px;
+  cursor: pointer;
+}
+
+.button:active {
+  bottom: -18px;
+}
+*/
