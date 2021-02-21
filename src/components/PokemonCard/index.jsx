@@ -10,7 +10,7 @@ const PokemonCard = (props) => {
   };
 
   return (
-    <div className='pokemon-card' style={{ background: colours[pokemon.types[0].type.name] + ', 0.3)' || '#f1eed9' }}>
+    <div className='pokemon-card' style={{ background: colours[pokemon.types[0].type.name] + ', 0.2)' || '#f1eed9' }}>
       <div>
         <img src={pokemon?.sprites?.front_default} alt={pokemon.name} className='pokemon-img' />
       </div>
