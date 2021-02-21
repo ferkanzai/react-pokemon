@@ -19,6 +19,7 @@ const colours = {
   dark: 'rgb(112, 87, 70',
   steel: 'rgb(183, 183, 206',
   fairy: 'rgb(214, 133, 174',
+  shadow: 'rgb(39, 43, 40'
 };
 
 const stats = {
@@ -30,9 +31,11 @@ const stats = {
   speed: 200,
 };
 
+const rnd = (n) => Math.floor(Math.random() * n)
 
 export {
   BASE_URL,
   colours,
-  stats
+  stats,
+  rnd
 }
