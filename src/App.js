@@ -82,7 +82,7 @@ function App() {
                 <PokemonProfile pokemonList={pokemonList} />
             </Route>
 
-            {/* <Redirect to='/' /> */}
+            <Redirect to='/' />
           </Switch>
         </div>
       </div>
