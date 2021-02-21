@@ -1,7 +1,6 @@
 .PokemonProfile {
   display: flex;
   align-items: center;
-  margin: 3rem;
 }
 
 .PokemonProfile_div_img {
@@ -45,9 +44,14 @@
 .PokemonProfile_stats {
   text-transform: capitalize;
   text-align: center;
-  margin: 2rem;
-  border: 1px solid black;
-  padding: 2rem;
+  margin: 0 2rem;
+  /* border: 1.5px solid black; */
+  border-radius: 20px;
+  padding: 0 2rem;
+}
+
+.PokemonProfile_stats > p {
+  margin: 0.5rem 0;
 }
 
 .PokemonProfile_statBar {
@@ -57,19 +61,20 @@
 }
 
 .PokemonProfile_statBar > p {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   margin: 0;
 }
 
 .PokemonProfile_statBarContainer {
   width: 200px;
-  height: 24px;
+  height: 15px;
   border: 1px solid black;
+  border-radius: 20px;
 }
 
 .PokemonProfile_statBarFill {
-  height: 24px;
-  background-color: darkgoldenrod;
+  height: 15px;
+  border-radius: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

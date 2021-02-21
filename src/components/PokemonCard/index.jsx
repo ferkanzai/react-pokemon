@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { colours } from '../../utils'
 import './styles.css';
 
 const PokemonCard = (props) => {
@@ -9,22 +10,24 @@ const PokemonCard = (props) => {
   };
 
   return (
-    <div className='pokemon-card'>
-      <button className='remove' onClick={() => handleRemove(pokemon.id)}>
-        -
-      </button>
-      <div className='pokemon-text'>
-        <p>#{pokemon.id}</p>
-        <p className='pokemon-name'>
-          <b>{pokemon.name}</b>
-        </p>
-      </div>
+    <div className='pokemon-card' style={{ background: colours[pokemon.types[0].type.name] + ', 0.3)' || '#f1eed9' }}>
       <div>
         <img src={pokemon?.sprites?.front_default} alt={pokemon.name} className='pokemon-img' />
       </div>
-      <Link to={`/pokemon/${pokemon.id}`}>
-        <button className='more-info'>+</button>
-      </Link>
+      <div>
+        <div className='pokemon-text'>
+          <p className='pokemon-id'>#{pokemon.id}</p>
+          <p className='pokemon-name'>
+            <b>{pokemon.name}</b>
+          </p>
+        </div>
+        <button className='remove' onClick={() => handleRemove(pokemon.id)}>
+          -
+        </button>
+        <Link to={`/pokemon/${pokemon.id}`}>
+          <button className='more-info'>+</button>
+        </Link>
+      </div>
     </div>
   );
 };
