@@ -1,49 +1,12 @@
 import { useParams } from 'react-router-dom';
-import { colours } from '../../utils'
-import { HorizontalBar } from '@reactchartjs/react-chart.js';
+import { colours, stats } from '../../utils'
 
 import './styles.css';
-
-const stats = {
-  hp: 255,
-  attack: 190,
-  defense: 250,
-  'special-attack': 194,
-  'special-defense': 250,
-  speed: 200,
-};
-
-const options = {
-  legend: { display: false },
-  title: { text: 'Base Stats', display: true },
-  maintainAspectRatio: true,
-  scales: {
-    xAxes: [
-      {
-        ticks: {
-          beginAtZero: true,
-          max: 160
-        },
-      },
-    ],
-  },
-};
 
 const PokemonProfile = ({ pokemonList }) => {
   const { id } = useParams();
 
   const pokemonChosen = pokemonList.find((pokemon) => pokemon.id === id);
-
-  const data = {
-    labels: pokemonChosen.stats.map(({ stat: { name } }) => name),
-    datasets: [
-      {
-        data: pokemonChosen.stats.map(({ base_stat }) => base_stat),
-        backgroundColor: 'goldenrod',
-        label: 'Base Stats',
-      },
-    ],
-  };
 
   return (
     <div className='PokemonProfile'>
@@ -96,9 +59,6 @@ const PokemonProfile = ({ pokemonList }) => {
           );
         })}
       </div>
-      {/* <div className='PokemonProfile_chart'>
-        <HorizontalBar data={data} options={options} width={500}/>
-      </div> */}
     </div>
   );
 };

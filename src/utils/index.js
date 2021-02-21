@@ -21,7 +21,18 @@ const colours = {
   fairy: 'rgb(214, 133, 174',
 };
 
+const stats = {
+  hp: 255,
+  attack: 190,
+  defense: 250,
+  'special-attack': 194,
+  'special-defense': 250,
+  speed: 200,
+};
+
+
 export {
   BASE_URL,
-  colours
+  colours,
+  stats
 }
