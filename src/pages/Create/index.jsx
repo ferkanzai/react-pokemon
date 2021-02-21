@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './styles.css';
 
-import { BASE_URL } from '../../utils';
+import { BASE_URL, rnd } from '../../utils';
 
 const TYPE_URL = `${BASE_URL}type`;
 
@@ -20,6 +20,7 @@ const getAllTypes = async () => {
 const handleErrors = {
   required: 'select-error',
   validate: 'select-error',
+  min: 'select-error'
 };
 
 const formatPokemon = (pokemon) => ({
@@ -42,37 +43,37 @@ const formatPokemon = (pokemon) => ({
   ],
   stats: [
     {
-      base_stat: Math.floor(Math.random() * 255),
+      base_stat: rnd(255),
       stat: {
         name: 'hp'
       }
     },
     {
-      base_stat: Math.floor(Math.random() * 190),
+      base_stat: rnd(190),
       stat: {
         name: 'attack'
       }
     },
     {
-      base_stat: Math.floor(Math.random() * 250),
+      base_stat: rnd(250),
       stat: {
         name: 'defense'
       }
     },
     {
-      base_stat: Math.floor(Math.random() * 194),
+      base_stat: rnd(194),
       stat: {
         name: 'special-attack'
       }
     },
     {
-      base_stat: Math.floor(Math.random() * 250),
+      base_stat: rnd(250),
       stat: {
         name: 'special-defense'
       }
     },
     {
-      base_stat: Math.floor(Math.random() * 200),
+      base_stat: rnd(200),
       stat: {
         name: 'speed'
       }
@@ -124,9 +125,10 @@ const Create = ({ pokemonList, setPokemonList }) => {
             name='id'
             id='id'
             type='number'
-            ref={register({ required: true })}
+            ref={register({ required: true, min: 899 })}
             placeholder='Pokemon ID'
             className={`select-type ${handleErrors[errors?.id?.type]}`}
+            min='899'
           />
         </div>
         <div className='input-divs'>
